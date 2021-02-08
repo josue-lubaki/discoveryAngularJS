@@ -1,3 +1,3 @@
 'use strict'
 
-var app = angular.module('collection', ['ngRoute']);
+var app = angular.module('collection', ['ngRoute'])

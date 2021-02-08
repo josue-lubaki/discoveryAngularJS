@@ -1,15 +1,20 @@
 'use strict'
 
 app
-    .controller('itemIndex', function($scope){
+  .controller('itemIndex', function ($scope) {
 
-    })
-    .controller('itemList', function($scope, itemProvider){
-        $scope.items = itemProvider.getItems();
-    })
-    .controller('itemCreate', function($scope){
+  })
+  .controller('itemList', function ($scope, itemProvider) {
+    $scope.items = itemProvider.getItems()
+  })
+  .controller('itemCreate', function ($scope, categoryProvider, itemProvider) {
+    $scope.categories = categoryProvider.getCategories()
+    $scope.items = itemProvider.getItems()
 
-    })
-    .controller('itemDelete', function($scope){
+    $scope.createItem = function (item) {
+      $scope.items = itemProvider.create(item)
+    }
+  })
+  .controller('itemDelete', function ($scope) {
 
-    })
+  })
