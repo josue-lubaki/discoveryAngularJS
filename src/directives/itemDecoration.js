@@ -1,6 +1,6 @@
 'use strict';
 
-app.directive('decorate', function () {
+app.directive('decorateItem', function () {
     return {
         template: 'Item "{{ item.name }}" est dans la categorie {{ item.category_id }}'
     }

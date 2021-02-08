@@ -5,7 +5,7 @@ var items = [
     {'name': 'Forrest Gump', 'category_id': 1}
 ]
 
-app.service('itemProvider', function(){
+app.service('itemProvider', function($http){
     this.getItems = function(){
         return items;
     };

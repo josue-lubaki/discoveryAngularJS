@@ -1,7 +1,9 @@
 <html>
     <head>
         <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+        <script type="text/javascript" src="bower_components\angular_route\angular_route.js"></script>
         <script type="text/javascript" src="app.js"></script>
+        <script type="text/javascript" src="routing.js"></script>
         <!-- Controllers -->
         <script type="text/javascript" src="src/controllers/categoryControllers.js"></script>
         <script type="text/javascript" src="src/controllers/itemControllers.js"></script>
@@ -14,7 +16,7 @@
 
     </head>
     <body ng-app = "collection">
-           <div class="container" ng-view>
+           <div ng-view>
 
            </div>
     </body>
