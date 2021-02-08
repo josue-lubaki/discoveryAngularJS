@@ -1,12 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
-    <title>Document</title>
-</head>
-<body>
+<html>
+    <head>
+        <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+        <!-- Controllers -->
+        <script type="text/javascript" src="src/controllers/categoryControllers.js"></script>
+        <script type="text/javascript" src="src/controllers/itemControllers.js"></script>
     
-</body>
+        <!-- Services -->
+        <script type="text/javascript" src="src/services/itemProvider.js"></script>
+    
+        <!-- Directives -->
+        <script type="text/javascript" src="src/directives/itemDecoration.js"></script>
+
+    </head>
+    <body ng-app = "collection">
+           <div ng-controller = "itemList">
+               <div ng-repeat = "item in items">
+                    <p decorate></p>
+               </div>
+
+           </div>
+    </body>
 </html>
